@@ -1,26 +1,43 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { DataContext } from './Store/StoreContext';
+import { Box, CircularProgress } from '@material-ui/core';
+const Home = React.lazy(() => import('./Screens/Home'));
 
-function App() {
+const App = () => {
+  const [state] = React.useContext(DataContext);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <React.Suspense
+        fallback={
+          <Box
+            display='flex'
+            flexDirection='column'
+            alignItems='center'
+            height='100vh'
+            justifyContent='center'
+          >
+            <CircularProgress />
+            <h1>Covid-19 Tracker</h1>
+          </Box>
+        }
+      >
+        {state.error ? (
+          <Box
+            display='flex'
+            flexDirection='column'
+            alignItems='center'
+            height='100vh'
+            justifyContent='center'
+          >
+            <CircularProgress />
+            <h1>{state.error.message}</h1>
+          </Box>
+        ) : (
+          <Home />
+        )}
+      </React.Suspense>
     </div>
   );
-}
+};
 
 export default App;
