@@ -5,7 +5,7 @@
 * React Js
 * Material-UI
 * Covid-19-Api
-star:
+
    - https://api.covid19api.com/summary
    - https://api.covid19api.com/dayone/country/pakistan
 
