@@ -5,10 +5,9 @@ import {
   Box,
   Grid,
   CircularProgress,
-  Paper,
   useMediaQuery,
 } from '@material-ui/core';
-import { DataContext } from '../Store/StoreContext';
+
 import Graph from '../Components/Graph';
 import SearchAndTable from '../Components/SearchAndTable';
 
@@ -34,21 +33,13 @@ const Home = () => {
           justifyContent='center'
           alignItems='center'
         >
-          {matches ? (
-            <img
-              width='50px'
-              height='50px'
-              className={classes.image}
-              src='https://images.vexels.com/media/users/3/193092/isolated/preview/bc883ba3bb35fc54dd1aa45844dc6471-covid-19-stroke-icon-by-vexels.png'
-            ></img>
-          ) : (
-            <img
-              width='70px'
-              height='70px'
-              className={classes.image}
-              src='https://images.vexels.com/media/users/3/193092/isolated/preview/bc883ba3bb35fc54dd1aa45844dc6471-covid-19-stroke-icon-by-vexels.png'
-            ></img>
-          )}
+          <img
+            width='70px'
+            height='70px'
+            className={classes.image}
+            alt='Covid 19 Logo'
+            src='https://images.vexels.com/media/users/3/193092/isolated/preview/bc883ba3bb35fc54dd1aa45844dc6471-covid-19-stroke-icon-by-vexels.png'
+          ></img>
 
           <h2>COVID 19 STATISTICS</h2>
         </Box>

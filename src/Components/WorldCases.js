@@ -1,5 +1,5 @@
 import React from 'react';
-import { makeStyles, Paper, Box, CircularProgress } from '@material-ui/core';
+import { makeStyles, Paper, Box } from '@material-ui/core';
 import PublicIcon from '@material-ui/icons/Public';
 import { DataContext } from '../Store/StoreContext';
 

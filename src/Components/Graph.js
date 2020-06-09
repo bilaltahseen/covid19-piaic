@@ -33,6 +33,7 @@ const Graph = () => {
           <img
             className={classes.image}
             src='https://www.countryflags.io/PK/flat/64.png'
+            alt='Pakistan Flag'
           />
           <p className={classes.text}>Pakistan's Cases</p>
         </Box>
