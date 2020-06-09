@@ -53,12 +53,12 @@ const SearchAndTable = () => {
   const pagination = (cases) => {
     console.log('Pagination');
     if (cases === 'Forward') {
-      setIncrement((increment += 6));
+      setIncrement((increment += 3));
       if (increment >= state.countriesData.length) {
         setIncrement(0);
       }
     } else {
-      setIncrement((increment -= 6));
+      setIncrement((increment -= 3));
       if (increment < 0) {
         setIncrement(0);
       }
@@ -66,7 +66,7 @@ const SearchAndTable = () => {
   };
   const matches = useMediaQuery((theme) => theme.breakpoints.down('xs'));
   const mapCards = state.countriesData
-    .slice(increment + 0, increment + 6)
+    .slice(increment + 0, increment + 3)
     .map((elem, index) => {
       return (
         <Grid item xs={12} md={4}>

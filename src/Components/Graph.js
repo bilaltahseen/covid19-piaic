@@ -34,7 +34,7 @@ const Graph = () => {
             className={classes.image}
             src='https://www.countryflags.io/PK/flat/64.png'
           />
-          <p className={classes.text}>Pakistan Casses</p>
+          <p className={classes.text}>Pakistan's Cases</p>
         </Box>
         <Paper elevation={1}>
           <Box padding={2}>

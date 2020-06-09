@@ -41,7 +41,7 @@ const WorldCases = () => {
       <Box paddingTop={5}>
         <Box display='flex' flexDirection='row' alignItems='center'>
           <PublicIcon fontSize='large' />
-          <p className={classes.text}>Global Casses</p>
+          <p className={classes.text}>Global Cases</p>
         </Box>
         <Paper elevation={1}>
           <Box
