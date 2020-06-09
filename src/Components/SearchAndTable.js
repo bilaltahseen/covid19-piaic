@@ -26,7 +26,7 @@ const SearchAndTable = () => {
   const classes = useStyles();
   const [state, dispatch] = React.useContext(DataContext);
   const [countryName, setCountryName] = React.useState('');
-  const [showArrows, setArrows] = React.useState(false);
+
   let [increment, setIncrement] = React.useState(0);
   const capital_letter = (str) => {
     str = str.toLowerCase().split(' ');

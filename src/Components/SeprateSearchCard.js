@@ -8,7 +8,6 @@ import CountryCard from '../Components/CountryCard';
 import { DataContext } from '../Store/StoreContext';
 
 export default function SeprateSearchCard() {
-  const [open, setOpen] = React.useState(true);
   const [state, dispatch] = React.useContext(DataContext);
 
   const handleClose = () => {
